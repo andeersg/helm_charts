@@ -1,0 +1,14 @@
+apiVersion: v2
+name: drupal
+description: A Helm chart for Drupal
+
+type: application
+appVersion: "1.0.1"
+
+version: 0.2.1
+
+dependencies:
+  - condition: mariadb.enabled
+    name: mariadb
+    repository: oci://registry-1.docker.io/bitnamicharts
+    version: 12.x.x

@@ -1,0 +1,32 @@
+drupalHashSalt: "su6nfMFns6erougbwxKwergFCAgpiwhgZM"
+
+php_memory_limit: "1G"
+
+# Domene som brukes:
+ingress:
+  hostname: "www.unicef.no"
+  extraTlsHosts:
+    - "unicef.no"
+
+  enabled: true
+  tls: true
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: cloudflare-issuer
+    nginx.ingress.kubernetes.io/proxy-body-size: 50m
+
+# Docker-pakken som skal kjøres:
+image:
+  repository: "bouvet/unicef_master"
+  tag: "latest"
+
+cron:
+  enabled: true
+  url: "https://www.unicef.no/cron/rtAk9YNuvY09M7mvr52vzh1UagQ4PH7FIA_jYT_947J7dnwFYE8G1BXvqsKHm3KcKD1gnrbjew"
+  schedule: "*/10 * * * *"
+
+privateFiles:
+  enabled: true
+  size: "2Gi"
+
+smtp: true
