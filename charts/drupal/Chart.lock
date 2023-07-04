@@ -1,9 +1,6 @@
 dependencies:
 - name: mariadb
-  repository: https://charts.bitnami.com/bitnami
-  version: 10.5.1
-- name: cert-manager
-  repository: https://charts.bitnami.com/bitnami
-  version: 0.5.7
-digest: sha256:8f479af925de19018c00724351165c6007e2bea96264cc3b39b79ba5ac60e0ab
-generated: "2022-06-09T16:35:21.909347+02:00"
+  repository: oci://registry-1.docker.io/bitnamicharts
+  version: 12.2.5
+digest: sha256:2957154abdaf7ce817d59a88da682dc17b12238239098907feab1674098a619c
+generated: "2023-07-04T13:08:46.414005+02:00"
