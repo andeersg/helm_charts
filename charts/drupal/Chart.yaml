@@ -5,7 +5,7 @@ description: A Helm chart for Drupal
 type: application
 appVersion: "1.0.1"
 
-version: 0.2.1
+version: 0.2.2
 
 dependencies:
   - condition: mariadb.enabled
